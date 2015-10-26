@@ -11,6 +11,12 @@ indexes:
 # your application using appcfg.py.
 
 - kind: Notification
+  properties:
+  - name: schedule
+  - name: timestamp
+    direction: desc
+
+- kind: Notification
   ancestor: yes
   properties:
   - name: timestamp
