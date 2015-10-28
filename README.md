@@ -34,3 +34,6 @@ gcloud auth login;
 ### Run a dev server, executed from project directory
 `~/google-cloud-sdk/platform/google_appengine/dev_appserver.py --php_executable_path="/usr/bin/php-cgi" --host="0.0.0.0" --port="8080" --admin_host="0.0.0.0" --admin_port="8000" --clear_datastore=yes .`
 
+### Upload active directory to GAE
+`~/google-cloud-sdk/platform/google_appengine/appcfg.py -A <project_id> update .`
+
