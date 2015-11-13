@@ -20,7 +20,7 @@ class EventListHandler(webapp2.RequestHandler):
             self.response.set_status(404)
             self.response.headers.add_header("Content-type", "application/json")
             return
-        models = Event.query(Event.schedule == s).fetch()
+        models = Event.query(Event.schedule == s).order(Event.start_time).fetch()
         # END UNIQUE PER RESOURCE
 
         output = RestHelper().to_json(models)

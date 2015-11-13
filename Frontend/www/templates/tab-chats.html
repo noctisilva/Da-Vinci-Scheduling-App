@@ -1,0 +1,37 @@
+<ion-view view-title="Da Vinci Schedule">
+  <ion-content>
+
+    <!-- Events! -->
+    <ion-list>
+      <ion-item ng-repeat="event in events" type="item-text-wrap">
+        <h2>{{ event.name }}</h2>
+        <p>{{ event.start_time }} - {{ event.end_time }}</p>
+      </ion-item>
+    </ion-list>
+
+
+    <!-- Exhibits! -->
+    <h1>Exhibits</h1>
+    <div class="padding">
+      <div class="list card" ng-repeat="exhibit in exhibits">
+        <div class="item item-divider">{{ exhibit.name }}</div>
+        <div class="item item-body">
+          <img ng-src="{{ exhibit.picture }}">
+          <p>{{ exhibit.description }}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Notifications! -->
+    <h1>Notifications</h1>
+    <ion-list>
+      <ion-item ng-repeat="notification in notifications" type="item-text-wrap">
+        <h3>{{ notification.message }}</h3>
+        <p>{{ notification.parsedTime }}</p>
+      </ion-item>
+    </ion-list>
+
+  </ion-content>
+</ion-view>
+
+
